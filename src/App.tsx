@@ -1,7 +1,7 @@
-import React, {FC} from 'react'
+import React, { FC } from 'react'
 import ReactDOM from 'react-dom'
-import {HashRouter, Switch, Route} from 'react-router-dom'
-import {Layout} from './components'
+import { HashRouter, Switch, Route } from 'react-router-dom'
+import { Layout } from './components'
 
 const App: FC = () => {
   return (

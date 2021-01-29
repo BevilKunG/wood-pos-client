@@ -1,5 +1,5 @@
-import React, {FC} from 'react'
-import {Menu} from './'
+import React, { FC } from 'react'
+import { Menu } from './'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -10,7 +10,7 @@ const Container = styled.div`
   height: 100vh;
 `
 
-const Layout: FC = ({children}) => {
+const Layout: FC = ({ children }) => {
   return (
     <Container>
       <Menu />

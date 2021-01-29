@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -13,11 +13,11 @@ const Menu: FC = () => {
   const items = [
     {
       title: 'บิล',
-      to: '/bill'
+      to: '/bill',
     },
     {
       title: 'คลังสินค้า',
-      to: '/stock'
+      to: '/stock',
     },
   ]
 
@@ -27,7 +27,7 @@ const Menu: FC = () => {
         <h1 className="text-white font-bold text-3xl">Wood POS</h1>
       </div>
 
-      {items.map(({title, to}) => (
+      {items.map(({ title, to }) => (
         <div className="w-full border-b-2 border-white pl-8 py-4">
           <Link to={to}>
             <h1 className="text-white text-xl">{title}</h1>
