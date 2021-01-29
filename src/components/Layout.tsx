@@ -1,12 +1,17 @@
 import React, {FC} from 'react'
 import {Menu} from './'
+import styled from 'styled-components'
+
+const Container = styled.div`
+  background: #deebf7;
+`
 
 const Layout: FC = ({children}) => {
   return (
-    <div>
+    <Container className="flex flex-col">
       <Menu />
       {children}
-    </div>
+    </Container>
   )
 }
 
