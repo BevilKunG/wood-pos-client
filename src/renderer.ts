@@ -26,5 +26,5 @@
  * ```
  */
 
-import './styles/index.css'
-import './app.tsx'
+import './styles/tailwind.css'
+import './App'
