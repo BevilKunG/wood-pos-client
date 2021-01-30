@@ -1,17 +1,19 @@
 import React, { FC } from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter, Switch, Route } from 'react-router-dom'
+import { MemoryRouter, Switch, Route } from 'react-router-dom'
 import { Layout } from './components'
+import { Bill, Stock } from './pages'
 
 const App: FC = () => {
   return (
-    <HashRouter>
+    <MemoryRouter initialEntries={['/bill']}>
       <Layout>
         <Switch>
-          <Route path="/" component={() => <h1>Hello World</h1>} exact />
+          <Route path="/bill" component={Bill} />
+          <Route path="/stock" component={Stock} />
         </Switch>
       </Layout>
-    </HashRouter>
+    </MemoryRouter>
   )
 }
 
