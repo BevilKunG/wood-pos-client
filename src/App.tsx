@@ -6,7 +6,7 @@ import { Bill, Stock } from './pages'
 
 const App: FC = () => {
   return (
-    <MemoryRouter initialEntries={['/bill']}>
+    <MemoryRouter initialEntries={['/stock']}>
       <Layout>
         <Switch>
           <Route path="/bill" component={Bill} />
