@@ -64,6 +64,7 @@ const Menu: FC = () => {
 
       {items.map(({ text, pathname, icon }) => (
         <ItemContainer
+          key={pathname}
           className="w-full border-b-2 border-white"
           active={location.pathname === pathname}
         >
