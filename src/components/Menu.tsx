@@ -14,9 +14,6 @@ type ItemContainerProps = {
 
 const Container = styled.div`
   background: #181f4e;
-  position: relative;
-  width: 18rem;
-  height: 100%;
 `
 
 const ItemContainer = styled.div<ItemContainerProps>`
@@ -57,9 +54,9 @@ const Menu: FC = () => {
   ]
 
   return (
-    <Container>
-      <div className="w-full border-b-2 border-white pl-8 py-4">
-        <h1 className="text-white font-bold text-3xl">Wood POS</h1>
+    <Container className="w-56 h-full relative">
+      <div className="w-full border-b-2 border-white pl-5 py-4">
+        <h1 className="text-white font-bold text-2xl">Wood POS</h1>
       </div>
 
       {items.map(({ text, pathname, icon }) => (
@@ -69,18 +66,18 @@ const Menu: FC = () => {
           active={location.pathname === pathname}
         >
           <Link to={pathname}>
-            <div className="flex flex-row items-center pl-8 py-4">
-              <FontAwesomeIcon icon={icon} size="lg"/>
-              <h1 className="text-xl font-medium ml-4">{text}</h1>
+            <div className="flex flex-row items-center pl-5 py-4">
+              <FontAwesomeIcon icon={icon} size="lg" />
+              <h1 className="text-lg font-medium ml-4">{text}</h1>
             </div>
           </Link>
         </ItemContainer>
       ))}
 
-      <div className="absolute bottom-0 w-full border-t-2 border-white pl-8 py-2">
+      <div className="absolute bottom-0 w-full border-t-2 border-white pl-5 py-2">
         <div className="flex flex-row items-center">
           <FontAwesomeIcon icon={faSignOutAlt} color="white" size="sm" />
-          <h1 className="text-white text-lg font-medium ml-4">ออกจากระบบ</h1>
+          <h1 className="text-white text-md font-medium ml-4">ออกจากระบบ</h1>
         </div>
       </div>
     </Container>

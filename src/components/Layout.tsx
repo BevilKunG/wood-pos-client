@@ -4,17 +4,13 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   background: #deebf7;
-  display: flex;
-  flex-direction: flex-row;
-  width: 100vw;
-  height: 100vh;
 `
 
 const Layout: FC = ({ children }) => {
   return (
-    <Container>
+    <Container className="w-screen h-screen flex flex-row">
       <Menu />
-      {children}
+      <div className="w-full">{children}</div>
     </Container>
   )
 }
