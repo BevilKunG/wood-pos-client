@@ -1,9 +1,14 @@
 import React, { FC } from 'react'
+import QRCode from 'qrcode.react'
 import CoverSvg from '../assets/cover_image.svg'
 import styled from 'styled-components'
 
 const DetailContainer = styled.div`
   height: 90%;
+`
+
+const DetailContent = styled.div`
+  height: calc(100% - 10rem);
 `
 
 const SideButtonContainer = styled.div`
@@ -33,21 +38,39 @@ const Tag = styled.span`
 const SideDetail: FC = () => {
   return (
     <div className="w-80 p-2">
-      <DetailContainer className="bg-white rounded">
+      <DetailContainer className="bg-white rounded overscroll-y-auto">
         <figure className="bg-gray-400 rounded-t">
           <img src={CoverSvg} className="object-contain w-full h-40" />
         </figure>
 
-        <div className="p-4">
-          <h1 className="text-xl font-medium">ชื่อสินค้า</h1>
+        <DetailContent className="flex flex-col justify-between p-4">
+          <div>
+            <h1 className="text-xl font-medium">ชื่อสินค้า</h1>
 
-          <div className="flex flex-row justify-between items-center mt-6">
-            <h4 className="text-md font-normal">ประเภท</h4>
-            <Tag className="rounded px-1">
-              <h5 className="text-xs text-white font-bold">ประตู</h5>
-            </Tag>
+            <div className="flex flex-row justify-between items-center mt-2">
+              <h4 className="text-md font-normal">ประเภท</h4>
+              <Tag className="rounded px-1">
+                <h5 className="text-xs text-white font-bold">ประตู</h5>
+              </Tag>
+            </div>
+
+            <div className="mt-10 flex flex-col justify-around">
+              <div className="flex flex-row justify-between items-center mb-4">
+                <h3 className="text-lg font-normal">ต้นทุน</h3>
+                <h3 className="text-lg font-normal">100</h3>
+              </div>
+
+              <div className="flex flex-row justify-between items-center mb-4">
+                <h3 className="text-lg font-normal">ราคาขาย</h3>
+                <h3 className="text-lg font-normal">200</h3>
+              </div>
+            </div>
           </div>
-        </div>
+
+          <div className="flex justify-center items-center">
+            <QRCode value="QRCODE" renderAs="svg" />
+          </div>
+        </DetailContent>
       </DetailContainer>
 
       <SideButtonContainer className="flex items-center">
